@@ -6,6 +6,12 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 ### [Part 1 - Initial Setup](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-1-initial-setup/)
 
+**TASK:** Create a basic Go application within a backend directory and a basic ReactJS application within a frontend directory.
+
+### [Part 2 - Simple Communication](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-2-simple-communication/)
+
+**TASK:** Implement a basic WebSocket server that will listen for messages and write them back via the same WebSocket.
+
 ## References
 
 1. [Building a Chat Application in Go with ReactJS][1]
