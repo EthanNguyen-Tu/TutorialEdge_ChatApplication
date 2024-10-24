@@ -12,6 +12,8 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 **TASK:** Implement a basic WebSocket server that will listen for messages and write them back via the same WebSocket.
 
+### [Part 3 - Designing our Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
+
 ## References
 
 1. [Building a Chat Application in Go with ReactJS][1]
