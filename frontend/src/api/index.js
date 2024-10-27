@@ -3,7 +3,7 @@ var socket = new WebSocket("ws://localhost:8080/ws");
 // Connect to the WebSocket endpoint and listen for events
 // Logs connection events, printing out any issues to the
 // browser console
-let connect = () => {
+let connect = (cb) => {
   console.log("Attempting Connection...");
 
   socket.onopen = () => {
@@ -12,6 +12,7 @@ let connect = () => {
 
   socket.onmessage = (msg) => {
     console.log(msg);
+    cb(msg);
   };
 
   socket.onclose = (event) => {
