@@ -44,14 +44,22 @@ yarn add node-sass
   - Code should be organized in packages.
   - The module name can be found in the "go.mod" file after the `module` keyword.
 
+#### How Multiple Clients are Handled
+
+Whenever a new connection is made, it is added to a pool of existing connections where every time a message is sent, all connections in the pool receives the message.
+
 ## Terminology
 
 1. [duplex communication][1] - a system where communication can occur in both directions between two devices or parties
+2. [channels][2] - pipes that link between goroutines within Go based applications that allow communication and subsequent passing of values to and from variables
+   - used to make high performance, high concurrent applications in Go with minimal challenge compared to other programming languages
 
 ## References
 
 1. [What is duplex communication?][1]
 2. [golang-standards Project Layout](https://github.com/golang-standards/project-layout)
 3. [Managing module source](https://go.dev/doc/modules/managing-source)
+4. [Go Channels Tutorial][2]
 
 [1]: https://www.pubnub.com/learn/glossary/duplex-communication/
+[2]: https://tutorialedge.net/golang/go-channels-tutorial/
