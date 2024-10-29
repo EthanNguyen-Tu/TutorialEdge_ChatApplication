@@ -16,6 +16,10 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 **TASK:** Create a header component and a chat history component to improve the frontend of the chat application.
 
+### [Part 4 - Handling Multiple Clients](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-4-handling-multiple-clients/)
+
+**TASK:** Implement the ability to handle multiple clients and broadcast any received messages to every connected client.
+
 ## References
 
 1. [Building a Chat Application in Go with ReactJS][1]

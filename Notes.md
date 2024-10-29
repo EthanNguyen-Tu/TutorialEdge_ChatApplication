@@ -33,9 +33,16 @@ In the front end folder, `npm run start` opens up the webpage locally at [http:/
 Need to install `node-sass`, since ReactJS projects do not automatically come with the ability to handle sass files.
 Note: Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.
 
-```shell
+```[shell]
 yarn add node-sass
 ```
+
+### [Part 4 - Handling Multiple Clients](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-4-handling-multiple-clients/)
+
+- In order to relative call other files in the same project, the full import path based on the module name should be used.
+  - Relative imports like `./\<module>` are not supported in Go.
+  - Code should be organized in packages.
+  - The module name can be found in the "go.mod" file after the `module` keyword.
 
 ## Terminology
 
@@ -44,5 +51,7 @@ yarn add node-sass
 ## References
 
 1. [What is duplex communication?][1]
+2. [golang-standards Project Layout](https://github.com/golang-standards/project-layout)
+3. [Managing module source](https://go.dev/doc/modules/managing-source)
 
 [1]: https://www.pubnub.com/learn/glossary/duplex-communication/
