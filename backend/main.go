@@ -2,36 +2,43 @@ package main
 
 import (
 	"backend/pkg/websocket"
-	
+
 	"fmt"
-	"log"
 	"net/http"
 )
 
 // WebSocket enpoint
-func serveWs(w http.ResponseWriter, r *http.Request) {
+func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	// Prints out the request host
 	fmt.Println(r.Host)
+	fmt.Println("WebSocket Endpoint Hit")
 
 	// Upgrades the connection to a WebSocket connection
-	ws, err := websocket.Upgrade(w, r)
+	conn, err := websocket.Upgrade(w, r)
 
 	// Print out the error message if there is one
 	if err != nil {
-		log.Println(err)
+		fmt.Fprintf(w, "%+v\n", err)
 	}
 
-	go websocket.Writer(ws)
-	websocket.Reader(ws)
+	// Create a new client on every connection that is registered with a pool.
+    client := &websocket.Client{
+        Conn: conn,
+        Pool: pool,
+    }
+
+    pool.Register <- client
+    client.Read()
 }
 
+// Creates a new pool to provide to the websocket.
 func setupRoutes() {
-	// http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-	// 	fmt.Fprintf(w, "Simple Server")
-	// })
+    pool := websocket.NewPool()
+    go pool.Start()
 
-	// map the /ws endpoint to the serveWs function
-	http.HandleFunc("/ws", serveWs)
+    http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+        serveWs(pool, w, r)
+    })
 }
 
 func main() {

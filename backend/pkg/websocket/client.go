@@ -14,8 +14,8 @@ type Client struct {
 }
 
 type Message struct {
-    Type int    `json:"type"`
-    Body string `json:"body"`
+    Type int    `json:"type"` // identifier to specify the type of the message
+    Body string `json:"body"` // the contents of the message
 }
 
 // Constantly listens in for new messages coming through on the Client’s
