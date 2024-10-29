@@ -14,6 +14,8 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 ### [Part 3 - Designing our Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
 
+**TASK:** Create a header component and a chat history component to improve the frontend of the chat application.
+
 ## References
 
 1. [Building a Chat Application in Go with ReactJS][1]
