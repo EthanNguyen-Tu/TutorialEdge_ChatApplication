@@ -22,7 +22,7 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 ### [Part 5 - Improving the Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
 
-**TASK:**
+**TASK:** Improve the visuals of the application and implement the ability to enter custom chat messages.
 
 ## References
 

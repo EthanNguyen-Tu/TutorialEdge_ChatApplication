@@ -50,11 +50,35 @@ Whenever a new connection is made, it is added to a pool of existing connections
 
 ## [Part 5 - Improving the Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
 
+- in SCSS, "&" is used for nesting, allowing the combination of multiple selectors into a single line of code
+
+### Constructor
+
+- where the state for a component should be set up
+- is not necessary for class components to recieve props, so a component does not need to have one if nothing needs to be done in the constructor
+
+### State
+
+- accessed in a component with `this.state`
+- `this.setState({ key: value })` - function that accepts an object with key-value pairs
+  - CASE: given object key matches an existing key in the state => updates the value in the state to the new value matching the key that is provided in the given object
+  - CASE: given object key does not already exist in the state => creates a new key in the state with the new value matching the key that is provided in the given object
+
+### Misc.
+
+- `.bind()` - JavaScript method that allows an object to borrow a method from another object
+  - Use Case: Maintaining the correct this context in callbacks
+
 ## Terminology
 
 1. [duplex communication][1] - a system where communication can occur in both directions between two devices or parties
 2. [channels][2] - pipes that link between goroutines within Go based applications that allow communication and subsequent passing of values to and from variables
    - used to make high performance, high concurrent applications in Go with minimal challenge compared to other programming languages
+3. `constructor` - object-oriented programming concept/method that creates an object
+   - called automatically every time an object is created, allowing the object to set initial values for its attributes or perform other setup tasks
+4. `props` - pieces of data passed into a child component from the parent
+   - ex. `<SomeComponent prop="Some prop data" />`
+5. `state` - data controlled within a component
 
 ## References
 
@@ -62,6 +86,7 @@ Whenever a new connection is made, it is added to a pool of existing connections
 2. [golang-standards Project Layout](https://github.com/golang-standards/project-layout)
 3. [Managing module source](https://go.dev/doc/modules/managing-source)
 4. [Go Channels Tutorial][2]
+5. [this.state - How to Use State in React js](https://www.iamtimsmith.com/blog/this-state-how-to-use-state-in-react)
 
 [1]: https://www.pubnub.com/learn/glossary/duplex-communication/
 [2]: https://tutorialedge.net/golang/go-channels-tutorial/
