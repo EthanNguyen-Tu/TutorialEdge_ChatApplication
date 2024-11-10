@@ -20,6 +20,10 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 
 **TASK:** Implement the ability to handle multiple clients and broadcast any received messages to every connected client.
 
+### [Part 5 - Improving the Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
+
+**TASK:**
+
 ## References
 
 1. [Building a Chat Application in Go with ReactJS][1]

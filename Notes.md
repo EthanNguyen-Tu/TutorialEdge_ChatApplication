@@ -28,7 +28,7 @@ In the front end folder, `npm run start` opens up the webpage locally at [http:/
 | Reduces the amount of network overhead required for the any real-time application |                                                                                                                                                        |
 |      Allows maintaining large amounts of clients on a single server instance      |                                                                                                                                                        |
 
-### [Part 3 - Designing our Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
+## [Part 3 - Designing our Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-3-designing-our-frontend/)
 
 Need to install `node-sass`, since ReactJS projects do not automatically come with the ability to handle sass files.
 Note: Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.
@@ -37,16 +37,18 @@ Note: Node Sass is no longer supported. Please use `sass` or `sass-embedded` ins
 yarn add node-sass
 ```
 
-### [Part 4 - Handling Multiple Clients](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-4-handling-multiple-clients/)
+## [Part 4 - Handling Multiple Clients](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-4-handling-multiple-clients/)
 
 - In order to relative call other files in the same project, the full import path based on the module name should be used.
-  - Relative imports like `./\<module>` are not supported in Go.
+  - Relative imports like `./<module>` are not supported in Go.
   - Code should be organized in packages.
   - The module name can be found in the "go.mod" file after the `module` keyword.
 
-#### How Multiple Clients are Handled
+### How Multiple Clients are Handled
 
 Whenever a new connection is made, it is added to a pool of existing connections where every time a message is sent, all connections in the pool receives the message.
+
+## [Part 5 - Improving the Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
 
 ## Terminology
 

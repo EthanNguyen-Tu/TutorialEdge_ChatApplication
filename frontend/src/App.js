@@ -1,5 +1,6 @@
 import "./App.css";
 import ChatHistory from "./components/ChatHistory/ChatHistory.jsx";
+import ChatInput from "./components/ChatInput/ChatIntput.jsx";
 import { connect, sendMsg } from "./api/index.js";
 import Header from "./components/Header/Header";
 import React, { Component } from "react";
@@ -22,9 +23,11 @@ class App extends Component {
     });
   }
 
-  send() {
-    console.log("Button has been pressed!");
-    sendMsg("The User has pressed the button.");
+  send(event) {
+    if (event.keyCode === 13) {
+      sendMsg(event.target.value);
+      event.target.value = "";
+    }
   }
 
   render() {
@@ -32,7 +35,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <ChatHistory chatHistory={this.state.chatHistory} />
-        <button onClick={this.send}>Press Me!</button>
+        <ChatInput send={this.send} />
       </div>
     );
   }
