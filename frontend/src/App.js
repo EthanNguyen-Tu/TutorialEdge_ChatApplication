@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   send(event) {
+    // event.keyCode === 13 checks for an "Enter" key input
     if (event.keyCode === 13) {
       sendMsg(event.target.value);
       event.target.value = "";
