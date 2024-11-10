@@ -69,6 +69,35 @@ Whenever a new connection is made, it is added to a pool of existing connections
 - `.bind()` - JavaScript method that allows an object to borrow a method from another object
   - Use Case: Maintaining the correct this context in callbacks
 
+## [Part 6 - Dockerizing your Backend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-6-dockerizing-your-backend/)
+
+Building a Docker image:
+
+```shell
+docker build -t backend .
+```
+
+- `-t` - allows the specification of a name and optionally a tag in the `name:tag` format
+- `.` - specifies the path to the Dockerfile is in the current directory
+
+Running the Docker image:
+
+```shell
+docker run -it -p 8080:8080 backend
+```
+
+- `-it` - combines the `-i/--interactive` and `-t/--tty` flags, allowing the container to be run interactively with a terminal session
+  - `-i/--interactive` - keeps the standard input (STDIN) open, allowing the interaction with the container
+  - `-t/--tty` - allocates a pseudo-TTY, which gives a terminal interface
+- `-p 8080:8080` - tells Dockerto map ports between the host machine's 8080 port and the container's 8080 port
+  - exposes port 8080 inside the container to port 8080 on the host machine, allowing access to services running on the port inside the container from the host machine
+- `backend` - the name or tag ofd the docker image to run
+
+### Adding Docker Benefits
+
+- allows the deployment of the docker-based application to any server or platform that supports Docker
+- allows the specification of the exact environment that the application needs in order to start up
+
 ## Terminology
 
 1. [duplex communication][1] - a system where communication can occur in both directions between two devices or parties
@@ -87,6 +116,7 @@ Whenever a new connection is made, it is added to a pool of existing connections
 3. [Managing module source](https://go.dev/doc/modules/managing-source)
 4. [Go Channels Tutorial][2]
 5. [this.state - How to Use State in React js](https://www.iamtimsmith.com/blog/this-state-how-to-use-state-in-react)
+6. [docker build (legacy builder)](https://docs.docker.com/reference/cli/docker/build-legacy/)
 
 [1]: https://www.pubnub.com/learn/glossary/duplex-communication/
 [2]: https://tutorialedge.net/golang/go-channels-tutorial/

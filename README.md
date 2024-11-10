@@ -1,6 +1,6 @@
 # TutorialEdge_ChatApplication
 
-This repository follows ["Building a Chat Application in Go with ReactJS"][1].
+This repository follows the 2018 ["Building a Chat Application in Go with ReactJS"][1] by Elliot Forbes.
 
 ## Parts
 
@@ -23,6 +23,10 @@ This repository follows ["Building a Chat Application in Go with ReactJS"][1].
 ### [Part 5 - Improving the Frontend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-5-improved-frontend/)
 
 **TASK:** Improve the visuals of the application and implement the ability to enter custom chat messages.
+
+### [Part 6 - Dockerizing your Backend](https://tutorialedge.net/projects/chat-system-in-go-and-react/part-6-dockerizing-your-backend/)
+
+**TASK:** Add Docker to the backend application.
 
 ## References
 
